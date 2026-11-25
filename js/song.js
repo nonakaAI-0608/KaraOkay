@@ -424,7 +424,7 @@ const Song = (() => {
       const bPlay = mkBtn('▶', '原曲と重ねて再生', () => {
         S.sel = tk; renderAll(); S.pos = tk.range[0]; play(false);
       });
-      const bDl = mkBtn('⬇', 'WAVで保存', () => UI.download(Engine.encodeWav(tk.samples, tk.sr), `karaokay_take${tk.id}.wav`));
+      const bDl = mkBtn('⬇', 'WAVで保存', () => UI.download(Engine.encodeWav(tk.samples, tk.sr), `KaraOkay_take${tk.id}.wav`));
       const bDel = mkBtn('✕', '削除', () => {
         S.takes = S.takes.filter(x => x !== tk);
         if (S.sel === tk) S.sel = null;

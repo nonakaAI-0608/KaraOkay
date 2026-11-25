@@ -1,4 +1,4 @@
-// Karaokay 用のローカルサーバー（http://localhost でマイクの許可を安定させるため）
+// KaraOkay 用のローカルサーバー（http://localhost でマイクの許可を安定させるため）
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -22,7 +22,7 @@ http.createServer((req, res) => {
   });
 }).listen(PORT, '127.0.0.1', () => {
   const url = `http://localhost:${PORT}/`;
-  console.log(`Karaokay を起動しました: ${url}`);
+  console.log(`KaraOkay を起動しました: ${url}`);
   console.log('このウィンドウを閉じると終了します。');
   if (!process.argv.includes('--no-open')) require('child_process').exec(`start "" "${url}"`);
 });
